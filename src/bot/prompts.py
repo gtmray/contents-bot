@@ -37,7 +37,7 @@ Guidelines:
   3. **Emotion and Mood**: Indicate the emotional atmosphere of the image (e.g., exciting, somber, peaceful, dramatic).
 - Each prompt must be varied to cover different parts of the script, providing visual diversity for the YouTube video.
 
-Your task is to generate at least 10 unique image prompts that align with the script content and tone. 
+Your task is to generate at least 10 unique image prompts that align with the script content and tone.
 
 The provided script will be used to generate these prompts.
 """

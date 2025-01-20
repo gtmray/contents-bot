@@ -11,3 +11,4 @@ venv
 /logs/
 *.log
 .hypothesis
+**/models

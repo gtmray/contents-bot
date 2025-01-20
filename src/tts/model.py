@@ -468,8 +468,7 @@ def build_model(path, device):
         assert key in model, key
         try:
             model[key].load_state_dict(state_dict)
-        except Exception as e:
-            print(f"An error occurred: {e}")
+        except Exception:
             state_dict = {k[7:]: v for k, v in state_dict.items()}
             model[key].load_state_dict(state_dict, strict=False)
     return model

@@ -2,14 +2,14 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v2.3.0
     hooks:
+      - id: pretty-format-json
+        args: [--verbose]
       - id: check-yaml
       - id: end-of-file-fixer
       - id: trailing-whitespace
       - id: check-merge-conflict
       - id: no-commit-to-branch
         args: [--branch, master, --branch, main --verbose]
-      - id: pretty-format-json
-        args: [--verbose]
   - repo: https://github.com/crate-ci/typos
     rev: v1.23.1
     hooks:

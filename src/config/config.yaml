@@ -1,0 +1,5 @@
+temperature: 0.8
+comfyui_api_json_path: "./src/config/flux_dev.json"
+default_tts_model_path: "./src/tts/models/kokoro-v0_19.pth"
+default_voices_path: "./src/tts/voices"
+logging_config_file: "./src/config/logging_config.ini"

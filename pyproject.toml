@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "contents-bot"
+version = "0.1.0"
+description = ""
+authors = ["Rewan Gautam <rewangautam@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "tts", from = "src" },
+    { include = "utils", from = "src" },
+]
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.0.1"
+
+[virtualenvs]
+create = false
+[tool.poetry.dependencies]
+python = "^3.10"
+phonemizer = "^3.3.0"
+torch = "2.5.1"
+transformers = "4.47.1"
+scipy = "^1.15.1"
+munch = "^4.0.0"
+moviepy = "^2.1.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

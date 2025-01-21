@@ -1,4 +1,5 @@
 import os
+import yaml
 import logging.config
 from typing import Optional
 from google.auth.transport.requests import Request
@@ -7,7 +8,12 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 from google.oauth2.credentials import Credentials
 
-logging.config.fileConfig("../config/logging_config.ini")
+# Load configuration from file
+with open("./src/config/config.yaml", "r") as config_file:
+    config = yaml.safe_load(config_file)
+
+logging.config.fileConfig(config.get("logging_config_file"))
+
 logger = logging.getLogger()
 
 

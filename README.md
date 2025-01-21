@@ -42,7 +42,7 @@ This project automates the creation and uploading of YouTube videos directly fro
    - Add required API keys and configuration values.
 
 4. Configure the Flux model:
-   - Set up a server with the Flux model enabled (or change your model accordingly).
+   - Set up a comfyui server with the Flux model enabled (or change your model accordingly).
 
 
 ## Usage
@@ -62,6 +62,7 @@ This project automates the creation and uploading of YouTube videos directly fro
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ## Acknowledgments
+- [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
 - [Flux Model](https://blackforestlabs.ai/)
 - [Text-to-Speech Model](https://huggingface.co/hexgrad/Kokoro-82M)
 - [YouTube Data API](https://developers.google.com/youtube/v3)

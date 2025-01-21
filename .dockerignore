@@ -1,0 +1,7 @@
+.idea/
+test.*
+**/__pycache__
+.vscode
+venv
+.env
+.git

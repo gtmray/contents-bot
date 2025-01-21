@@ -13,7 +13,7 @@ logger = logging.getLogger()
 
 # Constants
 CLIENT_SECRETS_FILE = os.getenv("CLIENT_SECRETS_FILE")
-TOKEN_FILE = "../credentials/token.json"
+TOKEN_FILE = os.getenv("TOKEN_FILE")
 YOUTUBE_UPLOAD_SCOPE = "https://www.googleapis.com/auth/youtube.upload"
 
 YOUTUBE_API_SERVICE_NAME = "youtube"
@@ -114,6 +114,7 @@ def upload_video(
     media_body = MediaFileUpload(file_path, chunksize=-1, resumable=True)
 
     try:
+        logger.info("Uploading video...")
         request = youtube.videos().insert(
             part="snippet,status", body=body, media_body=media_body
         )

@@ -91,6 +91,7 @@ Instructions for creating the description:
 - Write a **clear, concise description** of the video that summarizes the main ideas and topics discussed.
 - Include a **call to action** asking viewers to like, comment, and subscribe to "The American Shuffle" for more content like this.
 - The description should **not be too long**, but should provide enough context for viewers to understand what to expect from the video.
+- Add relevant hashtags in the description as well
 - You may use relevant keywords from the script, but do not overstuff them.
 
 Please output your result in this exact JSON format:

@@ -5,6 +5,7 @@ description = ""
 authors = ["Rewan Gautam <rewangautam@gmail.com>"]
 readme = "README.md"
 packages = [
+    { include = "bot", from = "src" },
     { include = "tts", from = "src" },
     { include = "utils", from = "src" },
 ]
@@ -22,6 +23,14 @@ transformers = "4.47.1"
 scipy = "^1.15.1"
 munch = "^4.0.0"
 moviepy = "^2.1.2"
+beautifulsoup4 = "4.12.3"
+openai = "1.43.0"
+httpx = "0.27.2"
+websocket-client = "1.8.0"
+websockets = "13.0.1"
+aiohttp = "^3.11.11"
+google-api-python-client = "^2.159.0"
+google-auth-oauthlib = "^1.2.1"
 
 
 [build-system]

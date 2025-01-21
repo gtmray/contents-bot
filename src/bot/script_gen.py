@@ -1,3 +1,4 @@
+import yaml
 import logging.config
 from bot.prompts import (
     script_gen_sys_prompt,
@@ -9,11 +10,15 @@ from bot.prompts import (
 )
 from utils import extract_json, GPTClient
 
-logging.config.fileConfig("../config/logging_config.ini")
+# Load configuration from file
+with open("./src/config/config.yaml", "r") as config_file:
+    config = yaml.safe_load(config_file)
+
+logging.config.fileConfig(config.get("logging_config_file"))
+
 logger = logging.getLogger()
 
-
-gpt = GPTClient(temperature=0.8)
+gpt = GPTClient(temperature=config.get("temperature"))
 
 
 def generate_script(article: str) -> str:

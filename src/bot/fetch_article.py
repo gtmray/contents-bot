@@ -1,9 +1,15 @@
+import os
+import yaml
 import logging.config
 import requests
 from bs4 import BeautifulSoup
-import os
 
-logging.config.fileConfig("../config/logging_config.ini")
+# Load configuration from file
+with open("./src/config/config.yaml", "r") as config_file:
+    config = yaml.safe_load(config_file)
+
+logging.config.fileConfig(config.get("logging_config_file"))
+
 logger = logging.getLogger()
 
 

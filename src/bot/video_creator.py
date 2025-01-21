@@ -1,10 +1,16 @@
 import os
+import yaml
 from PIL import Image
 import logging.config
 from moviepy.video.io.ImageSequenceClip import ImageSequenceClip
 from moviepy.audio.io.AudioFileClip import AudioFileClip
 
-logging.config.fileConfig("../config/logging_config.ini")
+
+# Load configuration from file
+with open("./src/config/config.yaml", "r") as config_file:
+    config = yaml.safe_load(config_file)
+
+logging.config.fileConfig(config.get("logging_config_file"))
 logger = logging.getLogger()
 
 

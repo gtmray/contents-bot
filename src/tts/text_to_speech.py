@@ -1,4 +1,4 @@
-import os
+import yaml
 import re
 import numpy as np
 import torch
@@ -8,14 +8,20 @@ from scipy.io.wavfile import write
 from .model import build_model
 from .kokoro import tokenize, phonemize, generate
 
-logging.config.fileConfig("../config/logging_config.ini")
-logger = logging.getLogger()
-
 load_dotenv(find_dotenv())
 
+# Load configuration from file
+with open("./src/config/config.yaml", "r") as config_file:
+    config = yaml.safe_load(config_file)
+
+
+logging.config.fileConfig(config.get("logging_config_file"))
+logger = logging.getLogger()
+
+
 # Constants
-DEFAULT_MODEL_PATH = os.getenv("DEFAULT_MODEL_PATH")
-DEFAULT_VOICES_DIR = os.getenv("DEFAULT_VOICES_DIR")
+DEFAULT_MODEL_PATH = config.get("default_tts_model_path")
+DEFAULT_VOICES_DIR = config.get("default_voices_path")
 DEFAULT_VOICE_INDEX = 2
 MAX_TOKENS = 500
 SAMPLE_RATE = 24000

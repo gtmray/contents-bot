@@ -1,0 +1,17 @@
+services:
+  bot:
+    build: .
+    container_name: bot-container
+    env_file:
+      - .env
+    volumes:
+      - ./src/bot/logs/:/app/src/bot/logs/
+    working_dir: /app
+    command: poetry run python src/bot/main.py
+    restart: unless-stopped
+    networks:
+      - bot-network
+
+networks:
+  bot-network:
+    driver: bridge

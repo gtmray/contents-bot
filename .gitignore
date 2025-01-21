@@ -1,0 +1,14 @@
+**/credentials
+test.*
+test**
+*test*
+!tests
+**/__pycache__
+.vscode
+venv
+*.env
+*cache*
+/logs/
+*.log
+.hypothesis
+**/models

@@ -47,11 +47,15 @@ This project automates the creation and uploading of YouTube videos directly fro
 
 ## Usage
 1. Edit the `main.py` file to include your desired news article URL.
-2. Run the pipeline:
+2. Install Poetry using pip:
+   ```bash
+   pip install poetry
+   ```
+3. Run the pipeline:
    ```bash
    poetry run python src/bot/main.py
    ```
-3. Check the generated video in the `src/bot/` directory and confirm its upload status on YouTube.
+4. Check the generated video in the `src/bot/` directory and confirm its upload status on YouTube.
 
 ## Configuration
 - **Logging**: Modify `logging_config.ini` in the `config` directory to adjust log levels and formatting.
